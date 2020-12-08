@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/* 
+reusable klassi
+arusaadavad klassid(sõnastamine)
+position relative ja absolute millal mida täpsemalt kasutada
+flex - ühes reas olevad, grid - galerii või ridade arv üle 1 siis ka grid
+ */
+
+body{
+    margin: 0;
+}
+
+.box{
+    background-color: lightgray;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px;
+}
+
+.header{
+    height: 30px;
+}
+
+.jumbo{
+    height: 120px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* .row{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+} */
+
+.row, .box{
+    height: 150px;
+    width: 200px;
+}
+
+.advance-comp{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+    width: 40%;
+}
+
+.ad-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.ad-box h1{
+    position: absolute;
+    top: -40;
+    z-index: 10;
+}
+
+.ad-box p{
+    color: white;
+    z-index: 10;
+}
+
+.static-red-left, .static-red-right{
+    display: block;
+    background-color: rebeccapurple;
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.static-red-left{
+    left: 50px;
+    bottom: -10px;
+    z-index: -1;
+}
+
+.static-red-left{
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+</style>
+</head>
+<body>
+    <header class="box"></header>
+    <div class="box jumbo"></div>
+    <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="row">
+        <div class="advanced-comp">
+            <span class="static-red-left"></span>
+            <span class="static-red-right"></span>
+            <div class="ad-box">
+                <h1>Lorem ipsum piu</h1>
+                <p>Subtext description of something that can be long and not interesting</p>
+            </div>
+        </div>
+        <div class="advanced-comp">
+            <span class="static-red-left"></span>
+            <span class="static-red-right"></span>
+            <div class="ad-box">
+                <h1>Lorem ipsum piu</h1>
+                <p>Subtext description of something that can be long and not interesting</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
